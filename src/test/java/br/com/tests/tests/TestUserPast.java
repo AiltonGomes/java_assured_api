@@ -3,16 +3,17 @@ package br.com.tests.tests;
 import br.com.tests.core.BaseTest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import org.junit.Assert;
-import org.junit.Test;
 import io.restassured.response.Response;
 import org.json.simple.JSONObject;
-public class TestUserPost extends BaseTest {
+import org.junit.Assert;
+import org.junit.Test;
+
+public class TestUserPast extends BaseTest {
     @Test
     public void postRequest() {
         JSONObject requestParams = new JSONObject();
-        requestParams.put("name", "John");
-        requestParams.put("job", "Software Engineer");
+        requestParams.put("name", "Ailton");
+        requestParams.put("job", "Software Engineer SR");
 
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
@@ -26,9 +27,9 @@ public class TestUserPost extends BaseTest {
         System.out.println(responseBody);
 
         String name = response.jsonPath().get("name");
-        Assert.assertEquals(name, "John");
+        Assert.assertEquals(name, "Ailton");
 
         String job = response.jsonPath().get("job");
-        Assert.assertEquals(job, "Software Engineer");
+        Assert.assertEquals(job, "Software Engineer SR");
     }
 }
