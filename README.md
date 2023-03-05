@@ -9,8 +9,9 @@
 
 ########### IMPORTANTE ##################
     
-    O metodo POST esta com status 201, porém quando se pesquisa pelo ID do usuário criado ele não traz retorno.
+    O metodo POST esta com status 201, porém quando se pesquisa pelo ID do usuário criado ele não traz retorno, trazendo o status code 404.
     Salvei imagens do erro mencionado na pasta evidencias.
+    
 
     
     
