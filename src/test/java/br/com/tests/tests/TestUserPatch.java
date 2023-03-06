@@ -8,7 +8,7 @@ import org.json.simple.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestUserPast extends BaseTest {
+public class TestUserPatch extends BaseTest {
     @Test
     public void postRequest() {
         JSONObject requestParams = new JSONObject();
@@ -18,7 +18,7 @@ public class TestUserPast extends BaseTest {
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
                 .body(requestParams.toJSONString())
-                .post("/users");
+                .post("/users/1");
 
         int statusCode = response.getStatusCode();
         Assert.assertEquals(statusCode, 201);
